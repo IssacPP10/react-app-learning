@@ -1,0 +1,21 @@
+.card-one{
+    background-color: lightblue;
+    padding: 25px;
+    color: black;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.bg-green{
+    color: white;
+    background: green;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.bg-red{
+    color: white;
+    background: red;
+    padding: 5px;
+    border-radius: 10px;
+}
