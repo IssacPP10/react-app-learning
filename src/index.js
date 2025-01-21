@@ -8,6 +8,7 @@ import { Task } from "./Task";
 import {Saludar} from "./Saludar"
 import {Posts} from "./Posts"
 import {Users} from "./Users"
+import {StatePractice} from "./StatePractice"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -48,6 +49,7 @@ root.render(
     <label id="labelInput" style={{margin: "10px"}}>Aqui va los valores del input...</label>
     <Posts />
     <Users />
+    <StatePractice />
   </div>
   </React.StrictMode>
 );
