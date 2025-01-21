@@ -32,3 +32,12 @@ body {
 .btn-style:hover{
     background-color: rgba(49, 141, 194, 0.822);
 }
+
+.card-two{
+    margin: 20px;
+    padding: 50px;
+    background: white;
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+}

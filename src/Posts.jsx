@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { VscCheckAll } from "react-icons/vsc";
 
 export function Posts() {
   const [posts, setPosts] = useState([]);
@@ -19,19 +20,50 @@ export function Posts() {
   }
 
   return (
-    <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <button onClick={handleFetch} className="btn-style">
         Traer datos
       </button>
-      <div style={{background: "#fff", padding: "40px", borderRadius: "20px", color: "black"}}>
-        <ul style={{padding: "10px"}}>
-            {posts.length > 0 ? (
+      <div
+        style={{
+          background: "#fff",
+          padding: "40px",
+          borderRadius: "20px",
+          color: "black",
+        }}
+      >
+        <ul style={{ padding: "10px", listStyle: "none" }}>
+          {posts.length > 0 ? (
             posts.map((post) => (
-                <li key={post.id}>{post.title}</li>
+              <li 
+                key={post.id}
+                style={{
+                    display: "flex",
+                    alignItems: "center", // Alinea verticalmente
+                    marginBottom: "5px", // Espacio entre cada elemento
+                  }}
+              >
+                <VscCheckAll style={{  marginRight: "10px"}} /> {post.title}
+              </li>
             ))
-            ) : (
-                <li>No hay posts disponibles</li>
-            )}
+          ) : (
+            <li
+                style={{
+                    display: "flex",                    
+                    alignItems: "center"
+                }}
+            >
+              <VscCheckAll style={{marginRight: "10px"}} />
+              No hay posts disponibles
+            </li>
+          )}
         </ul>
       </div>
     </div>

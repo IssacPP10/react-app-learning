@@ -7,6 +7,7 @@ import "./styles.css";
 import { Task } from "./Task";
 import {Saludar} from "./Saludar"
 import {Posts} from "./Posts"
+import {Users} from "./Users"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -16,6 +17,7 @@ const HandleChange = (e) => {
     label.textContent = e.target.value;
   }  
 }
+
 
 root.render(
   <React.StrictMode>
@@ -45,6 +47,7 @@ root.render(
     <input id="1" onChange={HandleChange}></input>
     <label id="labelInput" style={{margin: "10px"}}>Aqui va los valores del input...</label>
     <Posts />
+    <Users />
   </div>
   </React.StrictMode>
 );
